@@ -151,8 +151,8 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <configuration>
-              <source>1.5</source>
-              <target>1.5</target>
+              <source>1.6</source>
+              <target>1.6</target>
               <encoding>UTF-8</encoding>
             </configuration>
           </plugin>
@@ -173,6 +173,25 @@
             </execution>
           </executions>
         </plugin>
+        
+        <!-- building condensed jar for use in Framework -->
+	    <plugin>
+	       <groupId>org.apache.maven.plugins</groupId>
+	       <artifactId>maven-jar-plugin</artifactId>
+	       <version>2.4</version>
+	       
+	       <configuration>
+	           <includes>
+       	      	<include>com/amazonaws/services/s3/internal/InputSubstream.class</include>
+       	      	<include>com/amazonaws/services/s3/internal/MD5DigestCalculatingInputStream.class</include>
+       	      	<include>com/amazonaws/services/s3/internal/RepeatableInputStream.class</include>
+       	      	<include>com/amazonaws/util/BinaryUtils.class</include>
+              </includes>
+	          <excludes>
+	            <exclude>com/amazonaws/*.class</exclude>
+	          </excludes>
+	       </configuration>
+	    </plugin>
       </plugins>
     </build>
 
