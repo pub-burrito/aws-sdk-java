@@ -130,6 +130,7 @@
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <optional>true</optional>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -184,7 +185,7 @@
 	           <includes>
        	      	<include>com/amazonaws/services/s3/internal/InputSubstream.class</include>
        	      	<include>com/amazonaws/services/s3/internal/MD5DigestCalculatingInputStream.class</include>
-       	      	<include>com/amazonaws/services/s3/internal/RepeatableInputStream.class</include>
+       	      	<include>com/amazonaws/services/s3/internal/RepeatableFileInputStream.class</include>
        	      	<include>com/amazonaws/util/BinaryUtils.class</include>
               </includes>
 	          <excludes>
