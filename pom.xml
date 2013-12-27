@@ -193,6 +193,7 @@
 	       <version>2.4</version>
 	       
 	       <configuration>
+	           <classifier>mini</classifier>
 	           <includes>
        	      	<include>com/amazonaws/services/s3/internal/InputSubstream.class</include>
        	      	<include>com/amazonaws/services/s3/internal/MD5DigestCalculatingInputStream.class</include>
